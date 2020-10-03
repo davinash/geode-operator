@@ -1,0 +1,20 @@
+# permissions for end users to view geodes.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: geode-viewer-role
+rules:
+- apiGroups:
+  - distributed-cache.davinash.io
+  resources:
+  - geodes
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - distributed-cache.davinash.io
+  resources:
+  - geodes/status
+  verbs:
+  - get

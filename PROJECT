@@ -1,0 +1,11 @@
+domain: davinash.io
+layout: go.kubebuilder.io/v2
+projectName: geode-operator
+repo: github.com/davinash/geode-operator
+resources:
+- group: distributed-cache
+  kind: Geode
+  version: v1
+version: 3-alpha
+plugins:
+  go.sdk.operatorframework.io/v2-alpha: {}

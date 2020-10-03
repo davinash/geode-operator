@@ -1,0 +1,24 @@
+# permissions for end users to edit geodes.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: geode-editor-role
+rules:
+- apiGroups:
+  - distributed-cache.davinash.io
+  resources:
+  - geodes
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - distributed-cache.davinash.io
+  resources:
+  - geodes/status
+  verbs:
+  - get

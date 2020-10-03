@@ -1,0 +1,7 @@
+apiVersion: distributed-cache.davinash.io/v1
+kind: Geode
+metadata:
+  name: geode-sample
+spec:
+  # Add fields here
+  foo: bar
